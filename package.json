@@ -3,6 +3,7 @@
     "http-server": "^14.1.1"
   },
   "scripts": {
-    "start": "http-server -S -K mkn.edu.key -C mkn.edu.crt -p 443"
+    "start": "http-server -p 8080",
+    "lolkek": "http-server -S -K mkn.edu.key -C mkn.edu.crt -p 443"
   }
 }

@@ -1,0 +1,74 @@
+#kunteiner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 30vw;
+    gap: 0;
+    margin: auto;
+}
+
+.patch:hover {
+    transform: rotateX(180deg);
+}
+
+.patch:hover+.patch {
+    transform: rotateX(180deg);
+}
+
+.patch:hover+.patch+.patch {
+    transform: rotateX(180deg);
+}
+
+
+.patch:hover+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch {
+    transform: rotateX(180deg);
+}
+
+.patch:hover+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch {
+    transform: rotateX(180deg);
+}
+
+.patch:hover+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch {
+    transform: rotateX(180deg);
+}
+
+.patch:hover+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch {
+    transform: rotateX(180deg);
+}
+
+.patch:hover+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch {
+    transform: rotateX(180deg);
+}
+
+.patch:hover+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch {
+    transform: rotateX(180deg);
+}
+
+.patch:active {
+    transform: rotateX(180deg);
+}
+
+.patch {
+    width: 50px;
+    border: 5px white solid;
+    height: 50px;
+    transition: transform 500ms;
+    transform-style: preserve-3d;
+}
+
+.patch_face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.patch_front {
+    background: blue;
+}
+
+.patch_back {
+    background: red;
+    transform: rotateX(180deg);
+}
