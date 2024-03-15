@@ -41,17 +41,22 @@
 }
 
 .patch:hover+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch+.patch {
-    transform: rotateX(180deg);
+    transform: rotateX(180deg); 
 }
 
 .patch:active {
     transform: rotateX(180deg);
 }
 
+.line {
+    display: inline-flex;
+    flex-direction: row;
+}
+
 .patch {
-    width: 50px;
-    border: 5px white solid;
-    height: 50px;
+    width: 2.6vw;
+    border: 0.52vw white solid;
+    height: 2.6vw;
     transition: transform 500ms;
     transform-style: preserve-3d;
 }
