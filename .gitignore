@@ -1,3 +1,4 @@
-mkn.edu.key
-mkn.edu.crt
+*.key
+*.crt
+*.csr
 node_modules/*
