@@ -1,7 +1,7 @@
-# HW 1
+# HW 1 + 3
 
 Кажется, получилось сделать задание полностью. Запускался через `npm start`
 
-При создании сертификатов пользовался [ссылкой](https://stackoverflow.com/questions/10175812/how-to-generate-a-self-signed-ssl-certificate-using-openssl). Не добавлял в репозиторий, но их можно создать по `./make-cert.sh`
+# Пояснение про сертификаты
 
-![](docs/images/mkn-edu.png)
+Так как это отдельная возня для Ubuntu, распишу: сначала надо запустить `root-cert.sh` - получаем два файла, `rootCA.crt` надо добавить в trust и (в частности для firefox) импортировать [как тут](https://www.ibm.com/docs/en/devops-test-hub/10.5.3?topic=lists-importing-certificate-authority-into-mozilla-firefox-browser), потом `server-cert.sh` (там стоит поменять под себя конфиг) и можно запускаться
