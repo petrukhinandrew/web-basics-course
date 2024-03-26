@@ -1,79 +1,27 @@
+<!DOCTYPE html>
 <html>
-
 <head>
     <title>Task 04 Form</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
-    <!-- <link rel="stylesheet" type="text/css" href="css/patches.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/form.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <style>
-        input[type=text],
-        input[type=email],
-        select,
-        textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            margin-top: 6px;
-            margin-bottom: 16px;
-            resize: vertical
-        }
-
-        input[type=submit],
-        input[type=reset] {
-            background-color: #04AA6D;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        input[type=submit]:hover {
-            background-color: #45a049;
-        }
-
-        .question-group {}
-
-        .question-group-centered {
-            text-align: center;
-        }
-
-        .form-wrapper {
-            border-radius: 5px;
-            background-color: #f2f2f2;
-            padding: 20px;
-            width: 70vw;
-            margin: auto;
-            margin-top: 3vh;
-        }
-
-        h3 {
-            text-align: center;
-        }
-
-        hr {
-            color: #f9f9f9;
-        }
-    </style>
 </head>
 
 <body>
     <div class="form-wrapper">
-        <form>
+        <form id="beer-form" method="post" enctype="multipart/form-data" action="https://mkn.edu/api/submit">
             <div class="question-group">
                 <h3>Introduce yourself</h3>
                 <label for="fname">First name:</label>
-                <input type="text" id="fname" value="" placeholder="Andrey" required>
+                <input type="text" name="fname" id="fname" placeholder="Andrey" required>
 
                 <label for="lname">Last name:</label>
-                <input type="text" id="lname" value="" placeholder="Petrukhin" required>
+                <input type="text" name="lname" id="lname" placeholder="Petrukhin" required>
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" pattern=".+@example\.com" size="30" required />
+                <input type="email" name="email" id="email" pattern=".+@.+\.com" size="30" />
             </div>
 
             <hr>
@@ -81,9 +29,9 @@
             <div class="question-group-centered">
                 <h3>Choose your side</h3>
                 <label for="cpp">Average C++ lover</label>
-                <input type="radio" name="fav_lang" id="cpp">
+                <input type="radio" name="fav_lang" id="cpp" value="cpp" required>
                 <label for="rust">Average Rust enjoyer</label>
-                <input type="radio" name="fav_lang" id="rust">
+                <input type="radio" name="fav_lang" id="rust" value="rust" required>
             </div>
 
             <hr>
@@ -91,11 +39,11 @@
             <div class="question-group-centered">
                 <h3>That is where things came serious</h3>
                 <label for="coffee">Coffee</label>
-                <input type="checkbox" name="fav_drink" id="coffee">
+                <input type="checkbox" name="fav_drink" id="coffee" value="coffee">
                 <label for="tea">Coffee</label>
-                <input type="checkbox" name="fav_drink" id="tea">
+                <input type="checkbox" name="fav_drink" id="tea" value="tea">
                 <label for="beer">Beer</label>
-                <input type="checkbox" name="fav_drink" id="beer" required>
+                <input type="checkbox" name="fav_drink" id="beer" value="beer" required>
             </div>
 
             <hr>
@@ -108,7 +56,7 @@
                 <label for="fav_sort">
                     <h3>Select you favourite type of beer</h3>
                 </label>
-                <select name="fav_sort" id="fav_sort">
+                <select name="fav_sort" id="fav_sort" required>
                     <option value="none">None</option>
                     <option value="lagger">Lagger</option>
                     <option value="stout">Stout</option>
@@ -118,9 +66,9 @@
 
                 <label for="beer-pic">Attach your lovely beer picture:</label>
                 <input type="file" name="beer-pic" id="beer-pic" accept="image/png, image/jpeg">
-                <label for="url">Or put the url of your picture: </label>
-                <input type="url" name="url" id="url" placeholder="https://example.com" pattern="https://.*" size="30"
-                    required />
+                <label for="beer-url">Or put the url of your picture: </label>
+                <input type="url" name="beer-url" id="beer-url" placeholder="https://example.com" pattern="https://.*"
+                    size="30" />
             </div>
             <div class="question-group-centered">
                 <label for="beer-color">Select color of your favourite beer</label>
@@ -130,9 +78,9 @@
             <div class="question-group-centered">
                 <h3>The most important question</h3>
                 <label for="beer-time">What time are you going to drink beer today?</label>
-                <input type="time" id="beer-time" name="beer-time" min="09:00" max="18:00" required />
+                <input type="time" id="beer-time" name="beer-time" min="06:00" max="23:00" required/>
             </div>
-            <input type="hidden" name="form-id" value="310">
+            <input type="hidden" name="form_id" value="310">
             <div class="question-group-centered" style="margin: 3vh 3vw;">
                 <input type="submit" value="Submit">
                 <input type="reset" value="Reset">

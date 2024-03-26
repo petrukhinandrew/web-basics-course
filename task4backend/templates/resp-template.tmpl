@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Task 04 Form</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <!-- <link rel="stylesheet" type="text/css" href="css/patches.css"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+</head>
+
+<body>
+    Hello, {{.FirstName}} {{.LastName}}! <br/>
+
+    We wont censure you've chosen {{.DevSide}} side <br/>
+
+    Now we know you love {{range $index, $elem := .DrinkSide}}{{$elem}} {{end}} {{if ne .DrinkColor ""}} of {{.DrinkColor}} color! <br/>  {{else}} <br/>{{end}}
+
+    We will join you having a cup of beer at {{.DrinkTime}}! <br/>
+
+    {{if ne .DrinkPicCheckSum ""}} CheckSum for provided file is {{.DrinkPicCheckSum}} <br/> {{end}}
+    <a href="https://mkn.edu">Go back to main page</a> <br/>
+    Btw, you've submitted form #{{.FormId}}
+</body>
+
+</html>
